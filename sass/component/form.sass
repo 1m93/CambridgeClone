@@ -1,0 +1,25 @@
+.form 
+    &--row
+        display: flex
+
+        .form-field
+            margin-right: 15px
+        
+        .form-field:last-child
+            margin-right: 0
+
+    &-field
+        width: 100%
+        border: 1px solid transparent
+        border-bottom: 1px solid $black
+        padding: 7px 3px 7px 12px
+        font-size: 15px
+        margin-bottom: 15px
+        outline: none
+        resize: none
+
+        &::placeholder
+            color: $black
+
+        &:focus
+            border: 1px solid $black
