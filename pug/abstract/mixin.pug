@@ -1,0 +1,33 @@
+mixin homePosts (data)
+    each val in data 
+        a(href="#").post.d-flex
+            .post__img.flex-fill
+                img(src=val.image)
+            .post__text.d-flex.justify-content-center.flex-column
+                h4.post__text-title.mb-4=val.title
+                .post__text-content=val.content
+
+mixin formInput (placeholder, type)
+    input.form-field(placeholder=placeholder, type=type)
+
+mixin formTextArea (placeholder, row)
+    textarea.form-field(placeholder=placeholder, rows=row)
+
+mixin slides (data, name)
+    .carousel.slide(data-ride="carousel", id=name)
+        .carousel-inner
+            - for (var i = 0; i < data.length; i++)
+                if (i == 0)
+                    a(href=data[i].link).slide__item.carousel-item.active
+                        img(src=data[i].image).image
+                        .text=data[i].title
+                else 
+                    a(href=data[i].link).slide__item.carousel-item
+                        img(src=data[i].image).image
+                        .text=data[i].title
+        a.carousel-control-prev(href="#"+name, role="button", data-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.sr-only Previous
+        a.carousel-control-next(href="#"+name,role="button", data-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.sr-only Next

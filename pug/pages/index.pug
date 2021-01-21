@@ -10,10 +10,28 @@ block main
                 br 
                 | CAMBRIDGE
             p.sub-title.mb-4.pb-3 Your Ultimate Health Care Provider
-            .slide 
-                img(src="../asset/images/slide1.webp", width="940", height="525")
+            +slides(slideItems, "homeSlide")
         .about.text-center.mb-5.pb-5
             h2.title.mb-4 HOSPITAL FACILITIES
             p Looking for a place that feels like home? With Long Term Rooms and Operating Rooms that will exceed your expectations, Cambridge has everything you may possibly need to keep you feeling strong while you are led down the path to good health. Read about our facilities below, and all the care that has gone into creating our advanced medical center.
-        .post.mb-5.pb-5
+        .posts.mb-5.pb-5
+            +homePosts(homePosts)
+        .contact-form.d-flex.mb-5.pb-5
+            .info
+                h2.title.mb-4 CONTACT US
+                .info__details
+                    p.mb-4 5141 Broadway, New York, NY 10034, USA
+                    p.mb-4 tangvinhduong99@gmail.com
+                    p.mb-0 (212) 932-4000
+            form.form
+                .form--row
+                    +formInput("Name", "text")
+                    +formInput("Email", "email")
+                .form--row
+                    +formInput("Phone", "phone")
+                    +formInput("Address", "address")
+                +formInput("Subject", "text")
+                +formTextArea("Type your message here...", 6)
+                button.btn.btn-dark Submit
+
             

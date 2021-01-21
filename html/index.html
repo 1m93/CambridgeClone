@@ -25,13 +25,58 @@
       <div class="intro text-center mb-5 pb-5">
         <h1 class="title mb-4">WELCOME TO <br>CAMBRIDGE</h1>
         <p class="sub-title mb-4 pb-3">Your Ultimate Health Care Provider</p>
-        <div class="slide"> <img src="../asset/images/slide1.webp" width="940" height="525"></div>
+        <div class="carousel slide" data-ride="carousel" id="homeSlide">
+          <div class="carousel-inner"><a class="slide__item carousel-item active" href="#"><img class="image" src="../asset/images/slide1.webp"/>
+              <div class="text">Nurse Checking Girl</div></a><a class="slide__item carousel-item" href="#"><img class="image" src="../asset/images/slide2.webp"/>
+              <div class="text">Doctor Using Digital Tablet</div></a><a class="slide__item carousel-item" href="#"><img class="image" src="../asset/images/slide3.webp"/>
+              <div class="text">Chart And Stelthoscope</div></a>
+          </div><a class="carousel-control-prev" href="#homeSlide" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#homeSlide" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+        </div>
       </div>
       <div class="about text-center mb-5 pb-5">
         <h2 class="title mb-4">HOSPITAL FACILITIES</h2>
         <p>Looking for a place that feels like home? With Long Term Rooms and Operating Rooms that will exceed your expectations, Cambridge has everything you may possibly need to keep you feeling strong while you are led down the path to good health. Read about our facilities below, and all the care that has gone into creating our advanced medical center.</p>
       </div>
-      <div class="post mb-5 pb-5"></div>
+      <div class="posts mb-5 pb-5"><a class="post d-flex" href="#">
+          <div class="post__img flex-fill"><img src="../asset/images/post1.webp"/></div>
+          <div class="post__text d-flex justify-content-center flex-column">
+            <h4 class="post__text-title mb-4">LONG TERM ROOMS</h4>
+            <div class="post__text-content">Our medical facilities combine state-of -the-art technology with patient-centered design. A trip to the hospital can be worrisome, but with our advanced Long Term Rooms, you will see what great hands you are in. Our facilities meet the highest standards of cleanliness and sterility. Get in touch with us today to learn more about our Hospital facilities.</div>
+          </div></a><a class="post d-flex" href="#">
+          <div class="post__img flex-fill"><img src="../asset/images/post2.webp"/></div>
+          <div class="post__text d-flex justify-content-center flex-column">
+            <h4 class="post__text-title mb-4">OPERATING ROOMS</h4>
+            <div class="post__text-content">Our Operating Rooms offer a warm environment that fosters innovation, strives for excellence, nurtures respect for others, and ensures accountability in delivering world-class care to our patients. Care to learn more about our Operating Rooms? Get in touch with us today to hear more about what we can do for you and your family.</div>
+          </div></a><a class="post d-flex" href="#">
+          <div class="post__img flex-fill"><img src="../asset/images/post3.webp"/></div>
+          <div class="post__text d-flex justify-content-center flex-column">
+            <h4 class="post__text-title mb-4">WAITING AREAS</h4>
+            <div class="post__text-content">Cambridge is a Hospital that has been providing convenient, affordable healthcare to the area it serves since 2023. Our outstanding and well equipped medical facilities have allowed us to excel at what we do, and become one of the most well known hospitals in New York. Patients and visitors all find the true benefit in our Waiting Areas, and recommend our medical facilities to all.</div>
+          </div></a>
+      </div>
+      <div class="contact-form d-flex mb-5 pb-5">
+        <div class="info">
+          <h2 class="title mb-4">CONTACT US</h2>
+          <div class="info__details">
+            <p class="mb-4">5141 Broadway, New York, NY 10034, USA</p>
+            <p class="mb-4">tangvinhduong99@gmail.com</p>
+            <p class="mb-0">(212) 932-4000</p>
+          </div>
+        </div>
+        <form class="form">
+          <div class="form--row">
+            <input class="form-field" placeholder="Name" type="text"/>
+            <input class="form-field" placeholder="Email" type="email"/>
+          </div>
+          <div class="form--row">
+            <input class="form-field" placeholder="Phone" type="phone"/>
+            <input class="form-field" placeholder="Address" type="address"/>
+          </div>
+          <input class="form-field" placeholder="Subject" type="text"/>
+          <textarea class="form-field" placeholder="Type your message here..." rows="6"></textarea>
+          <button class="btn btn-dark">Submit</button>
+        </form>
+      </div>
     </main>
     <footer> 
       <div class="text-center my-5">(212) 932-4000</div>
