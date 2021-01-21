@@ -1,6 +1,5 @@
 include ../abstract/variable.pug
 include ../abstract/mixin.pug 
-include ../abstract/constant.pug
 
 doctype html
 html(lang='en')
@@ -8,7 +7,6 @@ html(lang='en')
         block title
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(rel='stylesheet' type="text/css" href='../css/style.css')
         link(rel="stylesheet"
             href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
             integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
@@ -31,12 +29,13 @@ html(lang='en')
             integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
             crossorigin="anonymous"
             )
+        link(rel='stylesheet' type="text/css" href='../css/style.css')
 
     body 
         block header
             include header.pug
 
-        block main 
+        block main
 
         block footer
             include footer.pug

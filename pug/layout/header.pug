@@ -1,0 +1,14 @@
+header.mx-auto
+    .logo.text-center.my-4.py-2
+        a(href="index.html") Cambridge
+    .menu.d-flex.justify-content-between.align-items-center
+        .menu__empty
+        .menu__links 
+            each val in menuLinks 
+                a(href=val.link).mx-2=val.name
+        .menu__user.d-flex.align-items-center
+            a.menu__user-location.mr-4 
+                i.fas.fa-map-marker-alt
+            a.menu__user-account.d-flex.align-items-center
+                i.fas.fa-user-circle.mr-2
+                span Log In
