@@ -1,0 +1,13 @@
+extends ../layout/layout.pug
+
+block title
+    title Facilities
+
+block main
+    main.facilities
+        .intro.text-center.container.mb-5.pb-5
+            h2.title.mb-4 THE INFRASTRUCTURE
+            p World Class Facilities
+        .detail.container.container--large.mb-5.pb-5
+            each item in facilities
+                +facility(item)

@@ -23,7 +23,7 @@ mixin slides (data, name)
         a.carousel-control-prev(href="#"+name, role="button", data-slide="prev")
             span.carousel-control-prev-icon(aria-hidden="true")
             span.sr-only Previous
-        a.carousel-control-next(href="#"+name,role="button", data-slide="next")
+        a.carousel-control-next(href="#"+name, role="button", data-slide="next")
             span.carousel-control-next-icon(aria-hidden="true")
             span.sr-only Next
 
@@ -46,4 +46,46 @@ mixin service (data)
             p.des.text-center.my-5=data.des
             a(href="#") Learn More
 
+mixin facility (data)
+    .facility
+        .facility__detail.d-flex.justify-content-center.flex-column
+            h4.title.text-center.mb-4=data.title
+            p.text-center.mb-0=data.content
+        .facility__img
+            img(src=data.image)
 
+mixin doctor (data)
+    .doctor.d-flex
+        .doctor__img.mr-4
+            img(src=data.image)
+        .doctor__detail.d-flex.justify-content-between.flex-column.py-4
+            h4.name=data.name
+            p.role.mb-0=data.role
+            p.des.mb-0=data.des
+
+mixin faq (data)
+    .faq
+        h4.title.mb-4=data.title
+        p.mb-0=data.content
+
+mixin doctorSlide (data, name)
+    .doctor-slide.carousel.slide(data-bs-ride="carousel", id=name)
+        ol.carousel-indicators
+            - for (var i = 0; i < data.length; i++)
+                li(data-bs-target="#"+name, data-bs-slide-to=i, class=(i == 0 ? "active" : ""))
+        .carousel-inner
+            - for (var i = 0; i < data.length; i++)
+                .carousel-item(class= (i == 0 ? "active" : ""))
+                    .doctor-slide__item
+                        .img
+                            img(src=data[i].image).image
+                        .detail
+                            p.role.mb-0=data[i].role
+                            h4.name.mb-0=data[i].name
+                            p.des.mb-0=data[i].des
+        a.carousel-control-prev(href="#"+name, role="button", data-bs-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.visually-hidden Previous
+        a.carousel-control-next(href="#"+name, role="button", data-bs-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.visually-hidden Next

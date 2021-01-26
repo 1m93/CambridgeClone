@@ -33,6 +33,10 @@ main {
 .container {
   max-width: 940px;
 }
+.container--large {
+  max-width: 1289px;
+  width: 100%;
+}
 
 header {
   max-width: 1360px;
@@ -127,6 +131,54 @@ header .menu__user-account:hover span {
   opacity: 0;
 }
 
+.facility {
+  display: flex;
+  margin-bottom: 48px;
+}
+.facility:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.facility:last-child {
+  margin-bottom: 0;
+}
+.facility__detail {
+  flex: 1;
+  padding: 0 5%;
+}
+.facility__img {
+  flex: 2;
+}
+.facility__img img {
+  width: 100%;
+}
+
+.doctor {
+  margin-bottom: 64px;
+}
+.doctor:last-child {
+  margin-bottom: 0;
+}
+.doctor__img img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.doctor__detail name {
+  text-transform: uppercase;
+}
+
+.faq {
+  margin-bottom: 64px;
+  max-width: 700px;
+}
+.faq:last-child {
+  margin-bottom: 0;
+}
+.faq p {
+  text-align: justify;
+}
+
 .home .intro .title {
   font-size: 72px;
 }
@@ -175,10 +227,6 @@ header .menu__user-account:hover span {
   object-fit: cover;
 }
 
-.services .detail {
-  max-width: 1116px;
-  width: 100%;
-}
 .services .detail .service {
   width: calc((100% - 20px) / 3);
 }

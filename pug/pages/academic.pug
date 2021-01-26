@@ -1,0 +1,14 @@
+extends ../layout/layout.pug
+
+block title
+    title Academic
+
+block main
+    main.facilities
+        .intro.text-center.container.mb-5.pb-5
+            h2.title.mb-4 FAQS
+            p Everyone Deserves an Answer
+        .detail.container.mb-5.pb-5
+            each item in faqs
+                +faq(item)
+            

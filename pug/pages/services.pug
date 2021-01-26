@@ -6,8 +6,8 @@ block title
 block main
     main.services
         .intro.text-center.container.mb-5.pb-5
-            h3.title.mb-4 OUR SERVICES
+            h2.title.mb-4 OUR SERVICES
             p Cambridge knows what exceptional service truly means. Through personalized guidance and immense support, our team of licensed professionals are here to ensure that all your health related needs are met. We provide patients with all the tools they need to walk out happier and more satisfied than ever before.
-        .detail.d-flex.justify-content-between.mx-auto.mb-5.pb-5
+        .detail.container.container--large.d-flex.justify-content-between.mb-5.pb-5
             each item in services
                 +service(item)
