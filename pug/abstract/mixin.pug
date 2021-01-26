@@ -36,3 +36,14 @@ mixin about (data)
                 a(href="#").sign Learn More
         .about__img
             img(src=data.image)
+
+mixin service (data)
+    .service
+        .service__img(style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + data.image + ") no-repeat center; background-size: cover").d-flex.justify-content-center.align-items-center
+            h4.title.text-center=data.title
+        .service__detail.d-flex.justify-content-between.flex-column.align-items-center.px-4.py-5
+            p.name.mb-0=data.name
+            p.des.text-center.my-5=data.des
+            a(href="#") Learn More
+
+

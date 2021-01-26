@@ -13,7 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 200;
 }
 
 a {
@@ -45,7 +46,6 @@ header .logo {
 }
 header .menu > div {
   min-width: 102px;
-  font-weight: 200;
 }
 header .menu__user-location i {
   font-size: 14px;
@@ -58,10 +58,6 @@ header .menu__user-account:hover span {
   color: #aabcbf;
 }
 
-footer {
-  font-weight: 200;
-}
-
 .post {
   background-color: #f1f1f1;
   margin-bottom: 60px;
@@ -71,10 +67,8 @@ footer {
 }
 .post__text {
   padding: 0 60px;
-  font-weight: 200;
 }
 .post__text-content {
-  font-size: 15px;
   line-height: 1.875em;
 }
 
@@ -92,13 +86,13 @@ footer {
   border: 1px solid transparent;
   border-bottom: 1px solid #000000;
   padding: 7px 3px 7px 12px;
-  font-size: 15px;
   margin-bottom: 15px;
   outline: none;
   resize: none;
 }
 .form-field::placeholder {
   color: #000000;
+  font-weight: 200;
 }
 .form-field:focus {
   border: 1px solid #000000;
@@ -141,16 +135,13 @@ footer {
   font-weight: 300;
 }
 .home .about p {
-  font-size: 15px;
   line-height: 1.875em;
-  font-weight: 200;
 }
 .home .posts .post:last-child {
   margin-bottom: 0;
 }
 .home .contact-form .info {
   flex-basis: 50%;
-  font-size: 15px;
 }
 .home .contact-form .info .title {
   font-size: 40px;
@@ -173,15 +164,34 @@ footer {
   z-index: 1000;
   padding: 50px;
   background-color: #f1f1f1;
-  font-size: 15px;
 }
 .about__content .title {
   font-size: 40px;
+  text-transform: uppercase;
 }
 .about__img img {
   width: 560px;
   height: 580px;
   object-fit: cover;
+}
+
+.services .detail {
+  max-width: 1116px;
+  width: 100%;
+}
+.services .detail .service {
+  width: calc((100% - 20px) / 3);
+}
+.services .detail .service__img {
+  height: 390px;
+  padding: 0 20%;
+  color: #ffffff;
+}
+.services .detail .service__detail {
+  background-color: #f1f1f1;
+}
+.services .detail .service .name {
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */
