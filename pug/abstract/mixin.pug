@@ -17,17 +17,22 @@ mixin slides (data, name)
     .carousel.slide(data-ride="carousel", id=name)
         .carousel-inner
             - for (var i = 0; i < data.length; i++)
-                if (i == 0)
-                    a(href=data[i].link).slide__item.carousel-item.active
-                        img(src=data[i].image).image
-                        .text=data[i].title
-                else 
-                    a(href=data[i].link).slide__item.carousel-item
-                        img(src=data[i].image).image
-                        .text=data[i].title
+                a(href=data[i].link).slide__item.carousel-item(class= (i == 0 ? "active" : ""))
+                    img(src=data[i].image).image
+                    .text=data[i].title
         a.carousel-control-prev(href="#"+name, role="button", data-slide="prev")
             span.carousel-control-prev-icon(aria-hidden="true")
             span.sr-only Previous
         a.carousel-control-next(href="#"+name,role="button", data-slide="next")
             span.carousel-control-next-icon(aria-hidden="true")
             span.sr-only Next
+
+mixin about (data)
+    .about.d-flex.justify-content-between
+        .d-flex.flex-column.justify-content-center
+            .about__content.d-flex.flex-column.justify-content-between
+                h3.title=data.title
+                p.content=data.content
+                a(href="#").sign Learn More
+        .about__img
+            img(src=data.image)
