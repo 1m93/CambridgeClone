@@ -1,0 +1,27 @@
+.center-slide
+    height: 600px
+
+    &__item
+        position: relative
+
+        .img img
+            width: 100%
+            height: 600px
+            object-fit: cover
+            filter: brightness(80%)
+        
+        .detail
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 520px
+            height: 200px
+            background-color: $white
+        
+        .role
+            font-size: 22px
+            text-transform: uppercase
+
+        .date
+            font-size: 18px

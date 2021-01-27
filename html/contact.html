@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head> 
-    <title>Department</title>
+    <title>Contact</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -20,36 +20,32 @@
         <div class="menu__user d-flex align-items-center"><a class="menu__user-location d-block me-4"> <i class="fas fa-map-marker-alt"></i></a><a class="menu__user-account d-flex align-items-center"><i class="fas fa-user-circle me-2"></i><span>Log In</span></a></div>
       </div>
     </header>
-    <main class="department">
-      <div class="intro text-center container mb-5 pb-5">
-        <h2 class="title mb-4">OUR BOARD</h2>
-        <p>Here to Serve You</p>
+    <main class="contact container container--large mb-5 pb-5">
+      <div class="contact__form d-flex p-5">
+        <div class="info text-center">
+          <h2 class="title mb-4">CONTACT US</h2>
+          <div class="info__details">
+            <p class="mb-4">5141 Broadway, New York, NY 10034, USA</p>
+            <p class="mb-4">tangvinhduong99@gmail.com</p>
+            <p class="mb-0">(212) 932-4000</p>
+          </div>
+        </div>
+        <form class="form">
+          <div class="form--row">
+            <input class="form-field" placeholder="Name" type="text"/>
+            <input class="form-field" placeholder="Email" type="email"/>
+          </div>
+          <div class="form--row">
+            <input class="form-field" placeholder="Phone" type="phone"/>
+            <input class="form-field" placeholder="Address" type="address"/>
+          </div>
+          <input class="form-field" placeholder="Subject" type="text"/>
+          <textarea class="form-field" placeholder="Type your message here..." rows="6"></textarea>
+          <button class="btn btn-dark">Submit</button>
+        </form>
       </div>
-      <div class="detail container mb-5 pb-5">
-        <div class="doctor d-flex">
-          <div class="doctor__img me-4"><img src="../asset/images/human1.webp"/></div>
-          <div class="doctor__detail d-flex justify-content-between flex-column py-4">
-            <h4 class="name">REESE WHITEMAN</h4>
-            <p class="role mb-0">Chairman</p>
-            <p class="des mb-0">Reese Whiteman is truly a valued member of the Cambridge family, initiating, organizing, and promoting new medical programs for our staff and patients.</p>
-          </div>
-        </div>
-        <div class="doctor d-flex">
-          <div class="doctor__img me-4"><img src="../asset/images/human2.webp"/></div>
-          <div class="doctor__detail d-flex justify-content-between flex-column py-4">
-            <h4 class="name">JAMIE LANE</h4>
-            <p class="role mb-0">Vice Chairman</p>
-            <p class="des mb-0">Jamie Lane has worked in the field of public health administration for many years. We are so lucky to have such a wonderful Vice Chairman that cares about the future of our Hospital.</p>
-          </div>
-        </div>
-        <div class="doctor d-flex">
-          <div class="doctor__img me-4"><img src="../asset/images/human3.webp"/></div>
-          <div class="doctor__detail d-flex justify-content-between flex-column py-4">
-            <h4 class="name">DREW CARLYLE</h4>
-            <p class="role mb-0">Treasurer</p>
-            <p class="des mb-0">Drew Carlyle brings decades of experience in hospital administration to the table. He is passionate about transparency and accountability. There really couldn’t be a more dedicated Treasurer.</p>
-          </div>
-        </div>
+      <div class="contact__address">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7447.764728385152!2d105.7784953!3d21.0373924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1611765430644!5m2!1svi!2s" width="100%" height="480" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </main>
     <footer> 

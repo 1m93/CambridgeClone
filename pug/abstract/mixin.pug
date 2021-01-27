@@ -56,7 +56,7 @@ mixin facility (data)
 
 mixin doctor (data)
     .doctor.d-flex
-        .doctor__img.mr-4
+        .doctor__img.me-4
             img(src=data.image)
         .doctor__detail.d-flex.justify-content-between.flex-column.py-4
             h4.name=data.name
@@ -69,23 +69,40 @@ mixin faq (data)
         p.mb-0=data.content
 
 mixin doctorSlide (data, name)
-    .doctor-slide.carousel.slide(data-bs-ride="carousel", id=name)
+    .doctor-slide.carousel.carousel-dark.slide(data-bs-ride="carousel", id=name)
         ol.carousel-indicators
             - for (var i = 0; i < data.length; i++)
                 li(data-bs-target="#"+name, data-bs-slide-to=i, class=(i == 0 ? "active" : ""))
         .carousel-inner
             - for (var i = 0; i < data.length; i++)
-                .carousel-item(class= (i == 0 ? "active" : ""))
-                    .doctor-slide__item
+                .carousel-item.h-100(class= (i == 0 ? "active" : ""))
+                    .doctor-slide__item.h-100.d-flex
                         .img
                             img(src=data[i].image).image
-                        .detail
-                            p.role.mb-0=data[i].role
-                            h4.name.mb-0=data[i].name
+                        .detail.d-flex.flex-column.justify-content-center.px-4
+                            p.role.mb-5=data[i].role
+                            h4.name.mb-5=data[i].name
                             p.des.mb-0=data[i].des
         a.carousel-control-prev(href="#"+name, role="button", data-bs-slide="prev")
             span.carousel-control-prev-icon(aria-hidden="true")
-            span.visually-hidden Previous
         a.carousel-control-next(href="#"+name, role="button", data-bs-slide="next")
             span.carousel-control-next-icon(aria-hidden="true")
-            span.visually-hidden Next
+
+mixin centerSlide (data, name)
+    .center-slide.carousel.slide(data-bs-ride="carousel", id=name)
+        ol.carousel-indicators
+            - for (var i = 0; i < data.length; i++)
+                li(data-bs-target="#"+name, data-bs-slide-to=i, class=(i == 0 ? "active" : ""))
+        .carousel-inner
+            - for (var i = 0; i < data.length; i++)
+                .carousel-item.h-100(class= (i == 0 ? "active" : ""))
+                    .center-slide__item.h-100
+                        .img
+                            img(src=data[i].image).image
+                        .detail.d-flex.flex-column.justify-content-center
+                            p.role.text-center.mb-4.pb-3=data[i].title
+                            p.name.text-center.mb-0=data[i].date
+        a.carousel-control-prev(href="#"+name, role="button", data-bs-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+        a.carousel-control-next(href="#"+name, role="button", data-bs-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
