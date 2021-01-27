@@ -100,8 +100,8 @@ mixin centerSlide (data, name)
                         .img
                             img(src=data[i].image).image
                         .detail.d-flex.flex-column.justify-content-center
-                            p.role.text-center.mb-4.pb-3=data[i].title
-                            p.name.text-center.mb-0=data[i].date
+                            p.title.text-center.mb-4.pb-2=data[i].title
+                            p.date.text-center.mb-0=data[i].date
         a.carousel-control-prev(href="#"+name, role="button", data-bs-slide="prev")
             span.carousel-control-prev-icon(aria-hidden="true")
         a.carousel-control-next(href="#"+name, role="button", data-bs-slide="next")

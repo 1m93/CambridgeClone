@@ -221,7 +221,7 @@ header .menu__user-account:hover span {
   height: 200px;
   background-color: #ffffff;
 }
-.center-slide__item .role {
+.center-slide__item .title {
   font-size: 22px;
   text-transform: uppercase;
 }
